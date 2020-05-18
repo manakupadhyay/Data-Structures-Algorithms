@@ -8,32 +8,21 @@ int hashFunction(int key)
 }
 int main()
 {
-	multimap<int,string> mp;       // collection of key,value pairs sorted by keys...
-	int key,again;
-	string str;
+	multimap<int,int> mp;
+	int key,value,again;
 	do{
 		cout <<  "Enter key and value: ";
-		cin >> key;
-		cin.ignore();
-		getline(cin,str);
+		cin >> key >> value;
 		int hash=hashFunction(key);
-		mp.insert(make_pair(hash,str));
+		mp.insert(make_pair(hash,value));
 		cout << "Enter 1 to enter more and 0 for exit: ";
 		cin >> again;
 	}while(again!=0);
 	cout << "KEY" << "\t" << "VALUE" << endl;
-	multimap<int,string> :: iterator itr;
+	multimap<int,int> :: iterator itr;
 	for(itr=mp.begin();itr!=mp.end();itr++)
 	{
 		cout << itr->first <<"\t" << itr->second << endl;
 	}
-	cout << "Enter the key you want to search: ";
-	cin >>  key;
-	int hash=hashFunction(key);
-	itr=mp.find(key);
-	//if(itr!=NULL)
-	cout << itr->first << " and " << itr->second << endl;
-	//else
-    cout << "Not found" << endl;
 	return 0;
 }

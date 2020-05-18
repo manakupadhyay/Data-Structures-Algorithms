@@ -30,9 +30,9 @@ int evualatePostfix(string s)
         {
             int op2=stk.top(); stk.pop();
             int op1=stk.top();  stk.pop();
-           ans=calculate(s[i],op2,op1);
+            ans=calculate(s[i],op2,op1);
             stk.push(ans);
-
+            ans=0;
         }
         else
         {
