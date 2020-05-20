@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 stack <int> stk;
-int calculate(int arr1[],int arr2[],int size1,int size2)
+void calculate(int arr1[],int arr2[],int size1,int size2)
 {
     int carry=0,ans=0,k=0;
     int big=size1<size2?size1:size2;
@@ -45,7 +45,7 @@ int calculate(int arr1[],int arr2[],int size1,int size2)
         cout << stk.top() << " ";
         stk.pop();
     }
-
+   
 }
 void getNumbers(int arr[], int size)
 {

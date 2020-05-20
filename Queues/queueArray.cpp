@@ -33,10 +33,7 @@ int Queue :: deQueue()
     if(isEmpty())
     {
          cout << "Queue is empty"<< endl;
-
     }
-
-    else
     return arr[front++];
 
 }
@@ -48,7 +45,6 @@ bool Queue :: isEmpty()
 {
     if(end<0)
     {
-
         return true;
     }
     else{
@@ -77,6 +73,7 @@ void Queue :: print()
 int main()
 {
    Queue qo;
+    cout << qo.deQueue() << endl;
    qo.enQueue(2); qo.print();
    qo.enQueue(4); qo.print(); qo.enQueue(15);qo.print();
    qo.enQueue(10);qo.print();

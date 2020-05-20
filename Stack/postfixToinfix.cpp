@@ -19,7 +19,7 @@ int calculate(char ch,int op2,int op1)
     else if(ch=='-') return op1-op2;
     else if(ch=='*') return op1*op2;
     else if(ch=='/') return op1/op2;
-    else if(ch=='%') return op1%op2;
+    return op1%op2;
 }
 int evualatePostfix(string s)
 {

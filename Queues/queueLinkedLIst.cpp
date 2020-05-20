@@ -11,7 +11,7 @@ struct Node{
 Node* front;
 Node* rear;
 void enQueue(int);
-int deQueue();
+void deQueue();
 int top();
 void print();
 bool isEmpty();
@@ -61,13 +61,14 @@ int top()
         return temp->data;
     }
 }
-int deQueue()
+void deQueue()
 {
     Node* temp=front;
     if(front==NULL && rear==NULL)
-        return -1;
+        cout << "Queue is empty" << endl;
     else if(front==temp && rear==temp){
         front=rear=NULL;
+        
         //return temp->data;
     }
     else{

@@ -41,10 +41,6 @@ bool checkExpression(string s)
        {
             if(!(stk.empty()) && getTop(s[i])  )
             {
-                if(stk.empty())
-                {
-                    return false;
-                }
                 stk.pop();
             }
             else{
@@ -53,6 +49,6 @@ bool checkExpression(string s)
        }
 
    }
-   bool isempty= stk.empty();
+   bool isempty = stk.empty();
    return isempty;
 }
