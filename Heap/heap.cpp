@@ -44,6 +44,10 @@ void insert(Heap* h, int data){
         h->arr[i]=data;
         return;
     }
+    if(h->count >= h->capacity){
+        cout << "Heap is full" << endl;
+        return;
+    }
     h->count++;
     int i = h->count-1;
     while(i > 0 && (data > h->arr[(i-1)/2])){
@@ -69,8 +73,9 @@ void heapify(Heap* h,int index){
         temp = h->arr[max];
         h->arr[max] = h->arr[index];
         h->arr[index] = temp;
+        heapify(h,max);
     }
-    heapify(h,max);
+  
 }
 void print(Heap* h){
     if(h == NULL || h->count == 0){
@@ -138,7 +143,7 @@ int main(){
                     break;
             case 6: destroyHeap(heap);
                     cout << "Heap destroyed" << endl;
-                    break;
+                    return 0;
             case 7: print(heap);
                     break;
             case 8: cout << "Enter index: ";
