@@ -1,4 +1,4 @@
-        // implementation of heap(max) data structure in C++
+        // implementation of maxHeap data structure in C++
 #include<iostream>
 using namespace std;
 
@@ -53,7 +53,6 @@ void insert(Heap* h, int data){
     while(i > 0 && (data > h->arr[(i-1)/2])){
         h->arr[i] = h->arr[(i-1)/2];
         i = (i-1)/2;
-        cout << "hey" << endl;
     }
     h->arr[i] = data;
 }
@@ -94,7 +93,6 @@ int deleteElement(Heap* h){
     data = h->arr[0];
     h->arr[0] = h->arr[h->count-1];
     h->count--;
-    cout << "wor" << endl;
     heapify(h,0);
     return data;
 }
