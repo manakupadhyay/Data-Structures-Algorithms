@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iterator>
 #include <list>
+#include <stack>
 #include <queue>
 #include <bits/stdc++.h>
 using namespace std;
@@ -43,30 +44,27 @@ void Graph :: display()
 }
 void Graph :: dfs(int start)            // DEPTH FIRST SEARCH...
 {
-    bool visited[vertex];
-    for(int i=0;i<vertex;i++)
-        visited[i]=false;
+    bool visited[vertex] = {false};
     stack<int> s;
     s.push(start);
-    cout << start << " ";
-    visited[start]=true;
     while(!s.empty())
     {
-        int temp=s.top(),flag=0;
-        list<int> :: iterator itr;
-        for(itr=adj[temp].begin();itr!=adj[temp].end();itr++)
+        int temp = s.top();
+        s.pop();
+        if(!visited[temp])
         {
-            if(visited[*itr]==false)
+            cout << temp << " ";
+            visited[temp]= true;
+        }
+        list<int> :: iterator itr;
+        for(itr = adj[temp].begin(); itr != adj[temp].end(); itr++)
+        {
+            if(!visited[*itr])
             {
                 s.push(*itr);
-                cout << *itr << " ";
-                visited[*itr]=true;
-                flag=1;
-                break;
+                visited[*itr] = true;
             }
         }
-        if(flag==0)
-            s.pop();
     }
 }
 void Graph :: bfs(int start)        // BREADTH FIRST SEARCH...

@@ -3,7 +3,7 @@
 
 #include <iostream>
 using namespace std;
-int root(int arr[],int s,int a)
+int root(int arr[],int s,int a)     // return root of an element
 {
     while(arr[a]!=a)
     {
@@ -11,7 +11,7 @@ int root(int arr[],int s,int a)
     }
     return a;
 }
-void Union(int arr[],int s,int a,int b)
+void Union(int arr[],int s,int a,int b)     
 {
     int rootA=root(arr,s,a);
     int rootB=root(arr,s,b);
@@ -46,23 +46,29 @@ int main()
         {
             case 1: {
                     int a,b;
-                    cin  >> a >> b;
+                    cout << "Enter first vertex: ";
+                    cin >> a;
+                    cout << "Enter second vertex: ";
+                    cin >> b;
                     Union(arr,size,a,b);
                     display(arr,size);
                     break;
             }
             case 2: {
                     int a,b;
-                    cin >> a >> b;
+                    cout << "Enter first vertex: ";
+                    cin >> a;
+                    cout << "Enter second vertex: ";
+                    cin >> b;
                     cout << find(arr,size,a,b) << endl;
-
                     break;
             }
             case 3: {
                     int a;
+                    cout << "Enter which element's root you want to find: ";
                     cin >> a;
                     int ans=root(arr,size,a);
-                    cout << ans << endl;
+                    cout << "Root of the element is: " << ans << endl;
                     break;
             }
 
