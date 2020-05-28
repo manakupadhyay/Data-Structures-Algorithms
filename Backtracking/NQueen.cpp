@@ -1,3 +1,5 @@
+        // TIME COMPLEXITY: O(2^n)- because we traversing all possible paths(cells)
+
 #include <iostream>
 #define N 4     // size of matrix
 using namespace std;

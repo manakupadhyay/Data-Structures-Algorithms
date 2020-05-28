@@ -1,4 +1,8 @@
     // PROBLEM CONSTRAINT: THE RAT CAN ONLY MOVE RIGHT AND DOWNWARD    
+    /*
+        Time Complexity: O(2^(n^2)).
+        Space Complexity: O(n^2)- because ouput matrix is required
+    */
 #include <iostream>
 using namespace std;
 #define N 5
