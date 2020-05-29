@@ -4,12 +4,7 @@
             Merge sort is a divide-and-conquer algorithm based on the idea of breaking down a list into several sub-lists
             until each sublist consists of a single element and merging those sublists in a manner that results into a
             sorted list.
-            Worst Case Time Complexity [ Big-O ]: O(n*log n)
-
-            Best Case Time Complexity [Big-omega]: O(n*log n)
-
-            Average Time Complexity [Big-theta]: O(n*log n)
-
+            Time Complexity [ Big-O ]: O(n*log n) - best, average and worst case.
             Space Complexity: O(n)
 
             Stable in nature(sorting algorithm is stable if whenever there are two records R and S with the same key and
