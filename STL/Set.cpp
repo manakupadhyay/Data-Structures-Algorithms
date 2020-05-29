@@ -1,60 +1,44 @@
-/*#include <iostream>
+    /*
+        SETS: Sets are conatineres that stores unique elements. The elements in the set are
+        always stored. They are implemented as Binary Search Trees.
+        Sets are passed by value.
+    */
+
+#include <iostream>
 #include <set>
 using namespace std;
-
+void print(set<int> s)
+{
+    if(s.size() == 0)
+    {
+        cout << "Set is empty" << endl;
+        return;
+    }
+    set<int> :: iterator itr;
+    for(itr = s.begin(); itr!=s.end(); itr++)
+    {
+        cout << *itr << " ";
+    }
+    cout << endl;
+}
 int main ()
 {
-    set<int> s;
-    s.insert(30);
-    s.insert(10);
-    s.insert(40);
-    s.insert(30);
-    cout << s.size() << endl;
-    s.clear();
-     s.insert(30);
-    s.insert(10);
-    s.insert(40);
-    s.insert(30);
+    set<int> s;     // cerates a set
+    // inserting elements
+    s.insert(30); s.insert(10); s.insert(40); s.insert(30); s.insert(10);
+    // retutrn size of the set
     cout << s.size() << endl;
     s.insert(89);
+    print(s);
     cout << s.size() << endl;
-    return 0;
-}
-*/
-#include <bits/stdc++.h>
-using namespace std;
-void countDistinct(int [], int , int );
-int main() {
-	// your code goes here
-	int t;
-	cin>>t;
-	while(t--)
-	{
-
-		int n,k;
-		cin>>n>>k;
-		int a[n];
-		for(int i=0;i<n;i++)
-		cin>>a[i];
-		countDistinct(a,k,n);cout<<endl;
-	}
-	return 0;
-}
-
-
-/*This is a function problem.You only need to complete the function given below*/
-/*You are required to complete below method */
-void countDistinct(int A[], int k, int n)
-{
-    set<int> s;
+    // checks wheather the set is empty or not
+    cout << s.empty() << endl;
+    // erases the specified element
+    s.erase(30);
+    print(s);
+    // counts elements with the passed value
+    cout << s.count(10) << endl;
+    // clears the set
     s.clear();
-    for(int i=0;i<k;i++)
-    {
-        s.clear();
-        for(int j=i;j<k+i;j++)
-        {
-            s.insert(A[j]);
-        }
-        cout << s.size() << " ";
-    }
+    return 0;
 }

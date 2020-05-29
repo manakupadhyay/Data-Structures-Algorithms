@@ -20,13 +20,12 @@ int main()
     q.push(10*(-1));
     q.push(8*(-1));
     q.push(1*(-1));
-    //priority_queue <int> :: iterator itr;
     show(q);
     cout << q.top() << endl;
     q.pop();
     cout << q.top() << endl;
     priority_queue<pair<int,int> > qq;
-    qq.push(make_pair(2,10));
+    qq.push(make_pair(2,10));   // (key, value), sorted by keys
     qq.push(make_pair(6,12));
     qq.push(make_pair(10,12));
     qq.push(make_pair(1,7));
@@ -36,5 +35,5 @@ int main()
         cout << temp.first << " " << temp.second << endl;
         qq.pop();
     }
-    priority_queue <int, vector<int>, greater<int> > g ;
+    // priority_queue <int, vector<int>, greater<int> > g ;
 }
