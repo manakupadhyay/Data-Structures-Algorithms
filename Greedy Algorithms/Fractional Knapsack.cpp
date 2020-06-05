@@ -22,8 +22,10 @@ int main()
 {
     vector<pair<int, int> >v;
     int items, knapsack;
+    // number of items in knapsack
     cout << "Enter the number of items; ";
     cin >> items;
+    // weight/size of knapsack
     cout << "Enter the size of Knapsack: ";
     cin >> knapsack;
     for(int i=0;i<items;i++)
@@ -38,12 +40,20 @@ int main()
     {
         cout << i+1 << "\t" << v[i].first << "\t" << v[i].second << endl;
     }
+
+    // sort the input on the basis of profit/value - in descending order
     sort(v.begin(), v.end(), sortByRatio);
+
+    // show the sorted input
     cout << "Item" << "\t" << "Value" << "\t" << "Weight" << endl;
     for(int i=0;i<v.size();i++)
     {
         cout << i+1 << "\t" << v[i].first << "\t" << v[i].second << endl;
     }
+
+    // CODE LOGIC
+
+    // it will contain total profit/value in the end
     double totalValue = 0;
     int i=0;
     while(true)
