@@ -4,12 +4,15 @@
         Binary search begins by comparing the middle element of the list with the target element. If the target
         value matches the middle element, its position in the list is returned. If it does not match, the list
         is divided into two halves. The first half consists of the first element to middle element whereas the
-        second half consists of the element next to the middle element to the last element.
+        second half consists of the element next to the middle element to the last element.Repeatedly check until 
+        the value is found or the interval is empty.
         TIME COMPLEXITY(worst and average case): O(LOG N)
         Best case time complexity : O(1)
         SPACE COMPLEXITY : O(1) (iterative)
+        SPACE COMPLEXITY : O(LOG N) (recursive)
 
-            */
+        PREREQISITE: The input array must be sorted.
+        */
 
 
 
