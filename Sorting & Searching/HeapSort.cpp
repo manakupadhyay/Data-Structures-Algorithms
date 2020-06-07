@@ -30,13 +30,17 @@ int main()
         cout << arr[i] << " ";
     cout << endl;
    
+    // build heap from the input array in the bottom-up order
     for(int i = size/2-1; i>=0; i--)
         heapify(arr,i,size);
     
+    // extract elements one by one
     for(int i = size-1;i>0;i--)
     {
+        // swap the first element with the last
         swap(arr[0],arr[i]);
 
+        // heapify the reduced array
         heapify(arr,0,i);
     }
     
