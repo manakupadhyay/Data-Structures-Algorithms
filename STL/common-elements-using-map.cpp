@@ -13,7 +13,6 @@ int main()
 	    map<int,int> mp;
 	    for(int i=0;i<n1;i++)
 	    {
-
 	        cin >> arr1[i];
 	        int j=arr1[i];
 	        mp[j]=1;
