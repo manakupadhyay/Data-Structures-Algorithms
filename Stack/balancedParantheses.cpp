@@ -16,9 +16,8 @@ int main()
         cout << "Expression is not balanced " << endl;
     return 0;
 }
-bool getTop(char ch)
+bool getTop(char ch, char c)
 {
-    char c = stk.top();
     if (c == '(' && ch == ')')
         return true;
     else if (c == '{' && ch == '}')
@@ -30,7 +29,7 @@ bool getTop(char ch)
 }
 bool checkExpression(string s)
 {
-
+    stack<char> stk;
     for (int i = 0; i < s.length(); i++)
     {
         if (s[i] == '(' || s[i] == '{' || s[i] == '[')
@@ -39,16 +38,16 @@ bool checkExpression(string s)
         }
         else if (s[i] == ')' || s[i] == '}' || s[i] == ']')
         {
-            if (!(stk.empty()) && getTop(s[i]))
+            if (!(stk.empty()) && getTop(s[i], stk.top()))
             {
                 stk.pop();
             }
             else
             {
-                return false;
+                return "NO";
             }
         }
     }
     bool isempty = stk.empty();
-    return isempty;
+    return isempty ? "YES" : "NO";
 }
