@@ -36,7 +36,7 @@ int evualatePostfix(string s)
         }
         else
         {
-            stk.push(s[i]);
+            stk.push(s[i]-'0');
         }
     }
     return stk.top();
