@@ -34,13 +34,12 @@ void Reverse()
 {
     Node* temp= new Node();
     temp=head;
-    stack <Node* > s;
+    stack <Node*> s;
     while(temp->next!=NULL){
         s.push(temp);
         temp=temp->next;
     }
     s.push(temp);
-   // temp=s.top();  //---------
     head=temp;
     s.pop();
     while(!s.empty()){

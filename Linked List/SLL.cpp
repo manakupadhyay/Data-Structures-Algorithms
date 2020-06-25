@@ -3,8 +3,8 @@ using namespace std;
 
 struct Node
 {
-        int data;
-        Node* next;
+    int data;
+    Node* next;
 };
 
 Node* insert(Node* head,int value)
@@ -38,5 +38,4 @@ int main()
         head=insert(head,20);
         head=insert(head,30);
         print(head);
-   // insert();
 }

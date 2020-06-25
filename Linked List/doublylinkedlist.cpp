@@ -1,4 +1,6 @@
-  #include <iostream>
+            // doubly linked list implementation in c++
+
+#include <iostream>
 using namespace std;
 struct Node{
     int data;
@@ -16,7 +18,7 @@ void reversePrint();
 void deleteAtBegin();
 void deleteAtEnd();
 void deleteAtSpecified(int);
-void findElement(int );
+void findElement(int);
 void reverseList();
 void reverseRecursion(Node*);
 void reverse()                      // MADE THIS AGAIN JUST FOR PRACTICE...

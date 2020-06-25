@@ -9,28 +9,6 @@ struct Node
     Node* next;
 };
 Node* head;
-// Node* partition(Node* head, int x){
-//      if(head==NULL || head->next==NULL)
-//             return head;
-//         Node* newHead = new Node();
-//         Node* h = newHead;
-//         Node* list2 = new Node();
-//         Node* hlist2 = list2;
-//         Node* temp = head;
-//         while(temp){
-//             if(temp->data < x){
-//                 newHead->next = temp;
-//                 newHead=newHead->next;
-//             }else{
-//                 list2->next=temp;
-//                 list2=list2->next;
-//             }
-//             temp=temp->next;
-//         }
-//         list2->next=NULL;
-//         newHead->next=hlist2->next;
-//         return h->next;
-// }
 void Insert(int data);
 void Print();
 void InsertAtEnd(int );

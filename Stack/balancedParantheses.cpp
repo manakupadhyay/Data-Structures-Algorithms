@@ -3,7 +3,6 @@
 using namespace std;
 bool checkExpression(string s);
 bool getTop();
-stack<int> stk;
 int main()
 {
     string s;
@@ -44,10 +43,9 @@ bool checkExpression(string s)
             }
             else
             {
-                return "NO";
+                return false;
             }
         }
     }
-    bool isempty = stk.empty();
-    return isempty ? "YES" : "NO";
+    return stk.empty();
 }

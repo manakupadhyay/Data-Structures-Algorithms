@@ -3,7 +3,6 @@
 using namespace std;
 int evualatePostfix(string);
 int calculate(char ch,int,int);
-stack <int> stk;
 int main()
 {
     cout << "Enter the postfix expression: ";
@@ -23,16 +22,15 @@ int calculate(char ch,int op2,int op1)
 }
 int evualatePostfix(string s)
 {
-    int ans=0;
+    stack <int> stk;
     for(int i=0;i<s.length();i++)
     {
         if(s[i]=='+' || s[i]=='-' || s[i]=='*' || s[i]=='%' || s[i]=='/')
         {
             int op2=stk.top(); stk.pop();
             int op1=stk.top();  stk.pop();
-            ans=calculate(s[i],op2,op1);
+            int ans=calculate(s[i],op2,op1);
             stk.push(ans);
-            ans=0;
         }
         else
         {
